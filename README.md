@@ -1,4 +1,4 @@
-# SkillChainAn Inter-State Migrant Job Portal
+# SkillChain: An Inter-State Migrant Job Portal
 
 ## Introduction
 
