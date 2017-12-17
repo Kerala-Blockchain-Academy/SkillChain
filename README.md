@@ -12,5 +12,11 @@ A major issue faced by unskilled migrant workers is the unawareness of the avail
 
 We propose a public, tamperproof and transparent application using Blockchain technology that connect unskilled and unorganized migrant workers and job providers so that the exploitation by middlemen such as unrecognized agents and contractors can be eliminated. The worker can register with the portal by creating their profile and uploading labour history, skills, availability and other personal details and a job provider can directly connect with the worker. This will create a transparency in job search and application process among these unskilled workers. We also propose a distributed digital ledger that records each and every work completed by the worker and also a review and rating mechanism by the job provider. Government agencies can also be a part of this system for ensuring minimum standards in wages and other living conditions for these workers. We think this system may bring a transparent job market where the exploitation by unauthorized middlemen may be completely eliminated. Furthermore, government recognised agents and contractors can recruit workmen through this portal for large scale jobs.
 
+### Advantages
+
+1. Experience building through building a job history and rating mechanism of labourers.
+2. Migrant labourers can show this experience as a resume/CV when they apply for any job anywhere.
+3. Our ultimate aim is to allow labourers to rise up in the social ladder by this process of experience building.
+
 # System Architecture
 ![Alt text](https://github.com/Ananthan-Rajasekharan/SkillChain/blob/master/screenshots/skillchain.png?raw=true "Architecture Diagram")
