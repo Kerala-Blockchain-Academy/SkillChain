@@ -105,6 +105,7 @@ console.log(usertype);
 		
 		var lightwalletaddr = document.getElementById("lightwalletaddr");
 		lightwalletaddr.innerHTML = address;
+		window.alert("Registration Successfully Completed.");
 
 });
 	
@@ -124,7 +125,8 @@ var txtContactNumber = document.getElementById("txtContactNumber").value;
 
 
 metaset.newJobpool( txtWorkName,txtWorkLocation,txtDuration,txtTotalWage,txtPerson,txtContactNumber, {from: account,gas:800000}).then(function() {
-  console.log("Transaction complete!");    
+  console.log("Transaction complete!");
+	window.alert("Job added Successfully.");  
   }).catch(function(e) {
     console.log(e);
     setStatus("Error setting value; see log.");

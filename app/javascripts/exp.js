@@ -29,7 +29,7 @@ function refresh(){
  var metaset = SkillChain.deployed();
  var jworkid = document.getElementById("txtWorkID12").value;
  
-	for(var i = 1; i < 2; i++) {
+	for(var i = 1; i < 3; i++) {
 		metaset.getapplied.call(i, {from: account,gas:400000}).then(function(value) {
 		var rworkid= value[0].valueOf();
 		var rworkerid = value[1].valueOf();
@@ -58,29 +58,30 @@ function refresh(){
 		var jworkerid = document.getElementById("test_idmy").value;
 		var jempid = localStorage.getItem("UserID");
 		var ratesval;
-		if(document.getElementById("star1").checked = true)
+		if(document.getElementById("star1").checked == true)
 		{
 			ratesval = 1;
 		}
-		else if(document.getElementById("star2").checked = true)
+		if(document.getElementById("star2").checked == true)
 		{
 			ratesval = 2;
 		}
-		else if(document.getElementById("star3").checked = true)
+		if(document.getElementById("star3").checked == true)
 		{
 			ratesval = 3;
 		}
-		else if(document.getElementById("star4").checked = true)
+		if(document.getElementById("star4").checked == true)
 		{
 			ratesval = 4;
 		}
-		else if(document.getElementById("star5").checked = true)
+		if(document.getElementById("star5").checked == true)
 		{
 			ratesval = 5;
 		}
 		var comment = document.getElementById("txtOtherDetails").value;
 		metaset.newWorkmenRating( jworkid,jworkerid,jworkname,parseInt(jempid),ratesval,comment, {from: account,gas:800000}).then(function() {
-		console.log("Transaction complete!");    
+		console.log("Transaction complete!");
+	window.alert("Rating Successfully Completed.");		
 		}).catch(function(e) {
 		console.log(e);
 		});	

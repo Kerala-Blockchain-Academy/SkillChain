@@ -15,11 +15,12 @@ window.onload = function() {
       alert("Couldn't get any accounts! Make sure your Ethereum client is configured correctly.");
       return;
     }
-
+	
     accounts = accs;
     account = accounts[0];
 	
-
+	//var table = document.getElementById("table2");
+	//table.style.display = 'block';
 	
   });
 		
@@ -33,12 +34,14 @@ refresh();
 	var useridlabel = document.getElementById("useridspan");
 	console.log(npuserid);
 		useridlabel.innerHTML = npuserid;
-	for(var i = 1; i < 2; i++) {
+	for(var i = 1; i < 3; i++) {
 		metaset.getRating.call(i, {from: account,gas:400000}).then(function(value) {
 			var rid = value[3].valueOf();
 			
-			//if((userid.localeCompare(rid)==0))
-			//{
+			var rwname = web3.toAscii(value[2]);
+			var rid="";
+			if((rwname.localeCompare(rid)==1))
+			{
 			var table = document.getElementById("jobtable1");
 			var row = table.insertRow(1);
 			var cell1 = row.insertCell(0);
@@ -53,7 +56,7 @@ refresh();
 			cell4.innerHTML = value[3].valueOf();
 			cell5.innerHTML = value[4].valueOf();
 			cell6.innerHTML = web3.toAscii(value[5]);	
-			//}
+			}
 			
 	
 		}).catch(function(e) {

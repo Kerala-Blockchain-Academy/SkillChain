@@ -53,7 +53,7 @@ function applyJob(){
 		var jworkid = document.getElementById("joblistworkid").value;
 		var jworkerid = localStorage.getItem("UserID");
 		var jworkname;
-	
+		
 		var oTable = document.getElementById('jobtable');
 		var rowLength = oTable.rows.length;
 		for (i = 0; i < rowLength; i++){ 
@@ -63,13 +63,14 @@ function applyJob(){
 		{
 		   jworkname= oCells.item(1).innerHTML;
 		}
-    }
+		}
 		
 	console.log(jworkname);
 	if(jworkname != "")
 	{
 		metaset.jobApplied( jworkid,parseInt(jworkerid),jworkname, {from: account,gas:800000}).then(function() {
-		console.log("Transaction complete!");    
+		console.log("Transaction complete!");
+		window.alert("Applied Successfully Completed.");		
 		}).catch(function(e) {
 		console.log(e);
 		});
@@ -80,10 +81,13 @@ function applyJob(){
  
  function refresh(){
  var metaset = SkillChain.deployed();
-	for(var i = 1; i < 2; i++) {
+	for(var i = 1; i < 4; i++) {
 		metaset.getJobs.call(i, {from: account,gas:400000}).then(function(value) {
 			console.log(value[0]);
-		
+		var rwname = web3.toAscii(value[1]);
+			var rid="";
+			if((rwname.localeCompare(rid)==1))
+			{
 			var table = document.getElementById("jobtable");
 			var row = table.insertRow(1);
 			var cell1 = row.insertCell(0);
@@ -100,7 +104,7 @@ function applyJob(){
 			cell5.innerHTML = value[4].valueOf();
 			cell6.innerHTML = web3.toAscii(value[5]);
 			cell7.innerHTML = value[6].valueOf();	
-	
+		}
 		}).catch(function(e) {
 			console.log(e);
 		});

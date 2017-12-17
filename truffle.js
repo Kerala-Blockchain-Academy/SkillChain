@@ -29,6 +29,9 @@ module.exports = {
 	"wo.js" : [
 	"javascripts/wo.js"
 	],
+	"jspdf.js" : [
+	"javascripts/jspdf.js"
+	],
     "stylesheets/styles.css": [
       "stylesheets/styles.css"
     ],
