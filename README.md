@@ -1,5 +1,7 @@
 # SkillChain: An Inter-State Migrant Job Portal
 
+This repository contains the code for an SkillChain Dapp With Micro-Finance functionality, coded using **Truffle** and **Solidity**. The backend blockchain is a private Ethereum network setup using **Geth(go-ethereum)** and the interactions are made possible by **Web3** javascript library.
+
 ## Introduction
 
 It is estimated that more than 80% of the workforce in India accounts to unorganized or informal sector and 50% of the national income evolves from this sector. Economical and social imbalances among different states in India fuelled internal migration rates in recent past. Higher rates of unemployment among educated youths in India caused them to look for jobs abroad and this greatly reduced the availability of workforce in Indian states, especially in informal job sectors. Low wages, limited and irregular employment opportunities, failed crops, family debts and drought are some of the factors that made many people to leave their homes in search of jobs in other states. But these unskilled migrant workers are facing lot many issues due to cultural differences, food habits, living style, languages, employment and wages while migrating to other states.
@@ -20,3 +22,5 @@ We propose a public, tamperproof and transparent application using Blockchain te
 
 # System Architecture
 ![Alt text](https://github.com/Ananthan-Rajasekharan/SkillChain/blob/master/screenshots/skillchain.png?raw=true "Architecture Diagram")
+
+### Demo Video: https://youtu.be/fh3TLUy-7Xg
