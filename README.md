@@ -1,6 +1,6 @@
 # SkillChain: An Inter-State Migrant Job Portal
 
-This repository contains the code for an SkillChain Dapp With Micro-Finance functionality, coded using **Truffle** and **Solidity**. The backend blockchain is a private Ethereum network setup using **Geth(go-ethereum)** and the interactions are made possible by **Web3** javascript library.
+This SkillChain Dapp was coded using **Truffle** and **Solidity** smart contracts. The backend blockchain is a private Ethereum network setup using **Geth(go-ethereum)** and the interactions are made possible by **Web3** javascript library.
 
 ## Introduction
 
@@ -22,5 +22,10 @@ We propose a public, tamperproof and transparent application using Blockchain te
 
 # System Architecture
 ![Alt text](https://github.com/Ananthan-Rajasekharan/SkillChain/blob/master/screenshots/skillchain.png?raw=true "Architecture Diagram")
+
+### Team Members
+Ananthan R
+Nikhil V Chandran
+Anoop V S
 
 ### Demo Video: https://youtu.be/fh3TLUy-7Xg
