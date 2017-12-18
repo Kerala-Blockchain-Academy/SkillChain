@@ -24,8 +24,6 @@ We propose a public, tamperproof and transparent application using Blockchain te
 ![Alt text](https://github.com/Ananthan-Rajasekharan/SkillChain/blob/master/screenshots/skillchain.png?raw=true "Architecture Diagram")
 
 ### Team Members
-Ananthan R
-Nikhil V Chandran
-Anoop V S
+Ananthan R, Nikhil V Chandran, Anoop V S,
 
 ### Demo Video: https://youtu.be/fh3TLUy-7Xg
