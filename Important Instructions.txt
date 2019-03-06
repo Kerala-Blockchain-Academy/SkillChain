@@ -1,0 +1,37 @@
+Step 1. Start ganache! Should work with ganache or geth!
+
+Step 2. Go to SkillChain Directory and do 'npm install'
+       that is update the node_modules folder when you run locally(npm install)
+
+Step 3: truffle migrate
+
+Step 4: Important Note:
+
+In  src directory --> app.js
+Line number 112244 --->
+change the variable: var conaddress = "0x5e5ED5239AE5E91f5752d63551372AFe01932290"; 
+
+The above value of contract address should be changed to the result you get when you do truffle migrate. When you do truffle migrate you get a contract address !!!
+Assign that value to conaddress!!!
+
+In  src directory --> emp.js
+Line number 3 --->
+change the variable: var conaddress = "0x5e5ED5239AE5E91f5752d63551372AFe01932290"; 
+
+In  src directory --> exp.js
+Line number 6 --->
+change the variable: var conaddress = "0x5e5ED5239AE5E91f5752d63551372AFe01932290"; 
+
+In  src directory --> jobpop.js
+Line number 5 --->
+change the variable: var conaddress = "0x5e5ED5239AE5E91f5752d63551372AFe01932290"; 
+
+In  src directory --> wo.js
+Line number 5 --->
+change the variable: var conaddress = "0x5e5ED5239AE5E91f5752d63551372AFe01932290"; 
+
+Step 5: 'npm run dev' to start lite-server
+
+Step 6: Goto localhost:3000
+
+Eureka!
