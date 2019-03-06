@@ -1,4 +1,5 @@
-pragma solidity ^0.4.2;
+pragma solidity ^0.5.0;
+
 contract SkillChain {
 
 	struct user {
@@ -53,7 +54,7 @@ contract SkillChain {
     mapping(uint256 => workmen_rating) m_workmen_rating;
 
     function newUser (uint256 _id, bytes32 _pass,bytes32 _fname,bytes32 _lname,bytes32 _uaddress,uint256 _number,uint256 _anumber,bytes32 _usertype) public {
-        var usernew = user(_id,_fname,_lname,_number,_uaddress,_anumber,_pass,_usertype);
+        SkillChain.user memory usernew = user(_id,_fname,_lname,_number,_uaddress,_anumber,_pass,_usertype);
         m_user[_id] = usernew;
         um.push(usernew);
     }
@@ -73,34 +74,34 @@ contract SkillChain {
         m_workmen_rating[workmen_rating_count] = workmen_rating(workmen_rating_count,_jobid,_userid,_jname,_cuserid,_rateing,_comment);
     }
 
-      function jobPoolCount () constant returns (uint256) {
+      function jobPoolCount () view public returns (uint256) {
         return jobpool_count;
     }
-      function workmenRatingCount () public returns (uint256) {
+      function workmenRatingCount () view public returns (uint256) {
         return workmen_rating_count;
     } 
 
-    function getRating(uint256 id) public returns(uint256,uint256,bytes32,uint256,uint,bytes32) {
+    function getRating(uint256 id) view public returns(uint256,uint256,bytes32,uint256,uint,bytes32) {
          return(m_workmen_rating[id].jobid,m_workmen_rating[id].userid,m_workmen_rating[id].jname,m_workmen_rating[id].cuserid,m_workmen_rating[id].rateing,m_workmen_rating[id].comment);
     }   
     
-    function getJobs(uint256 id) constant returns(uint256,bytes32,bytes32,uint256,uint256,bytes32,uint256) {
+    function getJobs(uint256 id) view public returns(uint256,bytes32,bytes32,uint256,uint256,bytes32,uint256) {
         return (m_jobpool[id].jobid, m_jobpool[id].jobname, m_jobpool[id].jobloc, m_jobpool[id].jobduration, m_jobpool[id].jobwage, m_jobpool[id].jobcontactpersion, m_jobpool[id].jobcontact);
     }
     
-    function getUser(uint256 id) constant returns(bytes32,bytes32,uint256,bytes32,uint256,bytes32) {
+    function getUser(uint256 id) view public returns(bytes32,bytes32,uint256,bytes32,uint256,bytes32) {
         return (m_user[id].fname,m_user[id].lname,m_user[id].number,m_user[id].uaddress,m_user[id].anumber,m_user[id].usertype);
     }
 
-    function getusertype(uint256 id) constant returns(bytes32,bytes32) {
+    function getusertype(uint256 id) view public returns(bytes32,bytes32) {
      return(m_user[id].pass,m_user[id].usertype);     
     }
 
-     function getapplied(uint256 pkey) constant returns(uint256,uint256,bytes32) {
+     function getapplied(uint256 pkey) view public returns(uint256,uint256,bytes32) {
      return(m_applied[pkey].jobid,m_applied[pkey].userid,m_applied[pkey].jname);     
      }
 
-    function getRatings(uint256 _id) public returns (uint256) {
+    function getRatings(uint256 _id) view public returns (uint256) {
         uint256 workerrating;
         uint256 dcount;
         for(uint i = 0 ; i < workmen_rating_count; i++) {
