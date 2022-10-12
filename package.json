@@ -7,12 +7,12 @@
     "test": "test"
   },
   "scripts": {
-    "dev": "lite-server",
+    "start": "lite-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "lite-server": "^2.3.0"
+    "lite-server": "^2.6.1"
   }
 }
